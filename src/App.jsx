@@ -1,8 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import {Container, Typography} from '@mui/material';
+import HabitList from "./components/HabitList";
+import HabitStats from "./components/HabitStats";
+import HabitForm from "./components/HabitForm.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,7 +12,10 @@ function App() {
     <>
       <Container maxWidth="md">
         <Typography component="h1" variant="h2" align="center">
-          <div>Subscribe to Me!</div>
+          <div> Habit Tracker</div>
+          <HabitForm/>
+          <HabitList/>
+          <HabitStats/>
         </Typography>
       </Container>
     </>
